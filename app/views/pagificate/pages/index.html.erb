@@ -1,0 +1,19 @@
+<h1>Pages</h1>
+
+<table border="0" cellspacing="5" cellpadding="5">
+  
+  <thead>
+    <tr>
+      <th>Page</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= @page.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
