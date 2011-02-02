@@ -2,8 +2,9 @@ class CreatePagesTable < ActiveRecord::Migration
   def self.up
     create_table :pages do |t|
       t.string :title, :null => false
-      t.string :body
+      t.text :body
       t.string :location
+      t.boolean :use_site_layout, :default => true
       t.boolean :published, :default => false
       t.timestamps
     end

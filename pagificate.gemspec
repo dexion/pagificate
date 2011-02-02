@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Andrew Bowerman"]
   s.email       = ["github@andrewbowerman.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/bowerman4875/pagificate"
   s.summary     = "Drop in pages for your rails app"
-  s.description = "This gem allows you to drop pages into your rails app"
+  s.description = "Quickly drop pages into your rails app"
 
   s.rubyforge_project = "pagificate"
 
