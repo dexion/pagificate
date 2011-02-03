@@ -3,9 +3,9 @@ class CreatePagesTable < ActiveRecord::Migration
     create_table :pages do |t|
       t.string :title, :null => false
       t.text :body
-      t.string :location
       t.boolean :use_site_layout, :default => true
       t.boolean :published, :default => false
+      t.string :permalink
       t.timestamps
     end
     

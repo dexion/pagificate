@@ -11,8 +11,7 @@ module Pagificate
     end
     
     def show
-      page = Page.find(params[:id])
-      
+      page = Page.find_by_permalink(params[:id])
       page.published? ? @page = page : redirect_to('/', :notice => 'No such page exists')
     end
     
@@ -58,7 +57,7 @@ module Pagificate
 private
 
     def find_page
-      @page = Page.find(params[:id])
+      @page = Page.find_by_permalink(params[:id])
     end
   
   end

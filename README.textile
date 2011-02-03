@@ -1,5 +1,3 @@
 h1. Pagificate
 
-h2. Drop in pages for your rails app.
-
-h3. Setup
+h2. Setup
