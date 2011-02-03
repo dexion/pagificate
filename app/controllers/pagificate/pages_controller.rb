@@ -1,8 +1,7 @@
 module Pagificate
-  
   class PagesController < ApplicationController
     before_filter :find_page, :except => [:index, :new, :create, :show]
-    
+
     unloadable
     
     def index
@@ -13,6 +12,7 @@ module Pagificate
     def show
       page = Page.find_by_permalink(params[:id])
       page.published? ? @page = page : redirect_to('/', :notice => 'No such page exists')
+      render :layout => false unless @page.use_site_layout?
     end
     
     def new
