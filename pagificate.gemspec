@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
   
   s.add_dependency  'rails', '3.0.3'
   s.add_dependency  'permalink_fu', '1.0.0'
+  
+  s.add_development_dependency 'rspec'
 end
