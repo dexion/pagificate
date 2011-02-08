@@ -1,7 +1,5 @@
-Rails.application.routes.draw do |map|
-
-  # match 'page/:permalink', :controller => 'pagificate/pages', :action => 'show'
+Rails.application.routes.draw do
 
   resources :pages, :controller => 'pagificate/pages'
-  
+
 end
