@@ -25,5 +25,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '2.4.0'
   s.add_development_dependency 'rspec-rails', '2.4.0'
   s.add_development_dependency 'capybara', '0.4.0'
+  s.add_development_dependency 'factory_girl_rails', '1.0.1'
+  s.add_development_dependency 'database_cleaner', '0.6.2'
   s.add_development_dependency 'sqlite3-ruby'
+  s.add_development_dependency 'launchy', '0.3.7'
 end

@@ -49,14 +49,23 @@ GEM
     celerity (0.8.7)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
+    configuration (1.2.0)
     culerity (0.2.14)
+    database_cleaner (0.6.2)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    factory_girl (1.3.3)
+    factory_girl_rails (1.0.1)
+      factory_girl (~> 1.3)
+      railties (>= 3.0.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
     i18n (0.5.0)
     json_pure (1.4.6)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -119,6 +128,9 @@ PLATFORMS
 
 DEPENDENCIES
   capybara (= 0.4.0)
+  database_cleaner (= 0.6.2)
+  factory_girl_rails (= 1.0.1)
+  launchy (= 0.3.7)
   pagificate!
   permalink_fu
   rspec (= 2.4.0)
