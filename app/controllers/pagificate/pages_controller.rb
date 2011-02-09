@@ -1,26 +1,27 @@
 module Pagificate
+
   class PagesController < ApplicationController
-    before_filter :find_page, :except => [:index, :new, :create, :show]
 
     unloadable
-    
+
+    before_filter :find_page, :except => [:index, :new, :create]
+
     def index
-      @published_pages   = Page.where(['published = ?', true])
-      @unpublished_pages = Page.where(['published = ?', false])
+      @published_pages   = Page.where('pages.published = ?', true)
+      @unpublished_pages = Page.where('pages.published = ?', false)
     end
-    
+
     def show
-      page = Page.find_by_permalink(params[:id])
-      page.published? ? @page = page : redirect_to('/', :notice => 'No such page exists')
+      redirect_to '/', :notice => 'No such page exists' unless @page.published?
       render :layout => false unless @page.use_site_layout?
     end
-    
+
     def new
       @page = Page.new
-    end    
-    
+    end
+
     def create
-      @page = Page.new(params[:page])
+      @page = Page.new params[:page]
 
       respond_to do |format|
         if @page.save
@@ -31,10 +32,10 @@ module Pagificate
         end
       end
     end
-    
+
     def edit
     end
-    
+
     def update
       respond_to do |format|
         if @page.update_attributes(params[:page])
@@ -45,10 +46,10 @@ module Pagificate
         end
       end
     end
-    
+
     def destroy
       @page.destroy
-      
+
       respond_to do |format|
         format.html { redirect_to pages_path, :notice => 'Page deleted.'}
       end
@@ -57,9 +58,9 @@ module Pagificate
 private
 
     def find_page
-      @page = Page.find_by_permalink(params[:id])
+      @page = Page.find_by_permalink params[:id]
     end
-  
+
   end
-  
+
 end

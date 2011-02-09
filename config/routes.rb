@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :pages, :controller => 'pagificate/pages'
+  resources :pagificate, :only => [] do
+    scope :module => :pagificate do
+      resources :pages
+    end
+  end
 
 end
