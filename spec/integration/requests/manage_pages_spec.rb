@@ -5,7 +5,9 @@ describe 'Managing Pages' do
   describe 'Creating' do
 
     it 'can be created' do
-      visit new_page_path
+      visit pages_path
+      
+      click_link 'Add a new page'
       
       # with invalid data
       click_button 'Save'
