@@ -1,0 +1,17 @@
+ru:
+  pagificate:
+    not_exist: Страница не существует
+  activerecord:
+    models:
+      page: 
+        one: Страница
+        few: Страницы
+        many: Страницы
+        other: Страницы
+    attributes:
+      page:
+        title: Заголовок
+        body: Текст
+        use_site_layout: Использвоать стиль сайта
+        published: ПУбликация
+        permalink: Постоянная ссылка

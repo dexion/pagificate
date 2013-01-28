@@ -6,9 +6,9 @@ Gem::Specification.new do |s|
   s.name        = "pagificate"
   s.version     = Pagificate::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Andrew Bowerman"]
-  s.email       = ["github@andrewbowerman.com"]
-  s.homepage    = "http://github.com/devfu/pagificate"
+  s.authors     = ["Snake"]
+  s.email       = ["not@mail.net"]
+  s.homepage    = "http://github.com/dexion/pagificate"
   s.summary     = "Simple semi-static page management Rails Engine"
   s.description = "Simple semi-static page management Rails Engine"
 
