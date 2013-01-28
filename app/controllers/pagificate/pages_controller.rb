@@ -15,7 +15,7 @@ module Pagificate
         redirect_to('/', :notice => t("pagificate.not_exist", :default => "Page doesn't exist")) and return
       end
       page.published? ? @page = page : redirect_to('/', :notice => t("pagificate.not_published", :default => "Page doesn't published"))
-      render :layout => false unless @page.use_site_layout?
+      render :layout => false unless page.use_site_layout?
     end
 
   end
