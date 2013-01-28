@@ -1,6 +1,7 @@
 ru:
   pagificate:
     not_exist: Страница не существует
+    not_published: Страница не опубликована
   activerecord:
     models:
       page: 
